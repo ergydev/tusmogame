@@ -17,7 +17,7 @@ const useWordle = (solution) => {
 
     // find any green letters 
     formattedGuess.forEach((l, i) => {
-        if(solutionArray[i]  === l.key){
+        if(solution[i]  === l.key){
             formattedGuess[i].color = 'green'
             solutionArray[i] = null
         }
@@ -76,7 +76,7 @@ const useWordle = (solution) => {
             return
         }
         const formatted = formatGuess()
-        console.log(formatted)
+        addNewGuess(formatted)
     }
 
     if (key === 'Backspace') {
