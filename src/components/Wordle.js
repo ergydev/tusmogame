@@ -3,6 +3,7 @@ import useWordle from '../hooks/useWordle'
 
 // Components
 import Grid from './Grid'
+import Keypad from './Keypad'
 
 export default function Wordle({ solution }) {
   const { currentGuess, handleKeyup, guesses, isCorrect, turn } = useWordle(solution)
@@ -23,6 +24,7 @@ export default function Wordle({ solution }) {
         <div>solution - {solution}</div>
         <div>Current Guess - {currentGuess}</div>
         <Grid guesses={guesses} currentGuess={currentGuess} turn={turn} />
+        <Keypad />
     </div>
     
   )
